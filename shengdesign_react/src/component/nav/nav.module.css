@@ -1,0 +1,17 @@
+.nav_container{
+   padding: 20px 20px 20px 20px;
+}
+
+.nav_link{
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+.nav_link > a{
+   color: white;
+}
+
+.nav_link > a:hover{
+   text-decoration: none;
+   color: red;
+}

@@ -2,6 +2,9 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import Test from './component/test_environment/test';
 
+//import script
+import "./index.css";
+
 //import pages
 import Home from "./pages/home/home";
 import Works from "./pages/works/works";

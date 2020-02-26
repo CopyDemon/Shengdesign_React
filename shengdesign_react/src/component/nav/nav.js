@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import  { Container }  from 'react-bootstrap';
-import  { Nav }  from 'react-bootstrap'
-// import  Row  from 'react-bootstrap/Container';
+import  { Container, Row, Col, Nav, Navbar,Form, FormControl, Button }  from 'react-bootstrap';
 
 //import script
-import classSelector from './nav.css';
+import classSelector from './nav.module.css';
 
 //import data
 // import nav_db from "./nav_db";
@@ -19,16 +17,23 @@ class Navigation extends Component{
         const nav_item = Object.keys(nav_links_data);
         const nav_li = nav_item.map((item) => {
             return(
-                <Nav.Link className={classSelector.nav_list}>
+                <li className={classSelector.nav_link}>
                     <a href={nav_links_data[item]}>{item}</a>
-                </Nav.Link>
+                </li>
             )
         })
         return(
-            <Container>
-                <Nav>
-                    {nav_li}
-                </Nav>
+            <Container fluid  bg="primary" className="p-0">
+                <Navbar bg="dark" variant="dark">
+                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Nav className="mr-auto">
+                        {nav_li}
+                    </Nav>
+                    <Form inline>
+                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                    <Button variant="outline-info">Search</Button>
+                    </Form>
+                </Navbar>
             </Container>
         )
     }
