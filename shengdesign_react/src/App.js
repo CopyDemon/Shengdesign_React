@@ -8,13 +8,13 @@ import Works from "./pages/works/works";
 import About from "./pages/about/about";
 
 //import component
-import Nav from "./component/nav/nav";
+import Navigation from "./component/nav/nav";
 
 
 function App() {
   return (
       <div className="App">
-        <Nav />
+        <Navigation />
         <Router>
           <Switch>
             <Route path="/" exact component={Home}/>
