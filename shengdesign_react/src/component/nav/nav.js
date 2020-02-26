@@ -25,12 +25,12 @@ class Navigation extends Component{
         })
         return(
             <Container fluid className="p-0">
-                <Row className={`${classSelector.nav_row} justify-content-end bg-dark`}>
-                    <div className={classSelector.logo_container}>
+                <Row className={`${classSelector.nav_row} justify-content-end bg-dark p-1`}>
+                    <a href="/" className={classSelector.logo_container}>
                         <div className={classSelector.logo_inner_circle}>
-                            <p>SHENG</p>
+                            <p href="/">SHENG</p>
                         </div>
-                    </div>
+                    </a>
                     <span className={classSelector.brand}>
                         <a href="/">{this.state.brand_name}</a>
                     </span>
