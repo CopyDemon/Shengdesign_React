@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  { Container, Row, Col, Nav, Navbar,Form, FormControl, Button }  from 'react-bootstrap';
+import  { Container,Row, Nav, Navbar,Form, FormControl, Button }  from 'react-bootstrap';
 
 //import script
 import classSelector from './nav.module.css';
@@ -9,7 +9,8 @@ import classSelector from './nav.module.css';
 
 class Navigation extends Component{
     state = {
-        nav_data : { Home : "/", Works : "/works", About :"About" }
+        nav_data : { Home : "/", Works : "/works", About :"About" },
+        brand_name : "< Sheng Design />"
     }
 
     render(){
@@ -23,17 +24,20 @@ class Navigation extends Component{
             )
         })
         return(
-            <Container fluid  bg="primary" className="p-0">
-                <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                    <Nav className="mr-auto">
+            <Container fluid className="p-0">
+                <Row className={`${classSelector.nav_row} justify-content-end bg-dark`}>
+                    <div className={classSelector.logo_container}>
+                        <div className={classSelector.logo_inner_circle}>
+                            <p>SHENG</p>
+                        </div>
+                    </div>
+                    <span className={classSelector.brand}>
+                        <a href="/">{this.state.brand_name}</a>
+                    </span>
+                    <nav className={classSelector.nav_container}>
                         {nav_li}
-                    </Nav>
-                    <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-info">Search</Button>
-                    </Form>
-                </Navbar>
+                    </nav>
+                </Row>
             </Container>
         )
     }
