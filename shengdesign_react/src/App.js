@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 //import script
 import "./index.css";
+import Site_banner from "./component/Site_banner/Site_banner";
 
 //import pages
 import Home from "./pages/home/home";
@@ -11,13 +12,14 @@ import Works from "./pages/works/works";
 import About from "./pages/about/about";
 
 //import component
-import Navigation from "./component/nav/nav";
+//import Navigation from "./component/Navigation/navigation";
+
 
 
 function App() {
   return (
       <div className="App">
-        <Navigation />
+        <Site_banner/>
         <Router>
           <Switch>
             <Route path="/" exact component={Home}/>

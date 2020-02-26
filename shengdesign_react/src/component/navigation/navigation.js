@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import  { Container,Row, Nav, Navbar,Form, FormControl, Button }  from 'react-bootstrap';
+import  { Container,Row}  from 'react-bootstrap';
 
 //import script
+import Nav_container from './nav_inner';
 import classSelector from './nav.module.css';
-
-//import data
-// import nav_db from "./nav_db";
 
 class Navigation extends Component{
     state = {
@@ -14,15 +12,7 @@ class Navigation extends Component{
     }
 
     render(){
-        const nav_links_data = this.state.nav_data;
-        const nav_item = Object.keys(nav_links_data);
-        const nav_li = nav_item.map((item) => {
-            return(
-                <li className={classSelector.nav_link}>
-                    <a href={nav_links_data[item]}>{item}</a>
-                </li>
-            )
-        })
+        const nav_link_data = this.state.nav_data;
         return(
             <Container fluid className="p-0">
                 <Row className={`${classSelector.nav_row} justify-content-end bg-dark p-1`}>
@@ -31,12 +21,7 @@ class Navigation extends Component{
                             <p href="/">SHENG</p>
                         </div>
                     </a>
-                    <span className={classSelector.brand}>
-                        <a href="/">{this.state.brand_name}</a>
-                    </span>
-                    <nav className={classSelector.nav_container}>
-                        {nav_li}
-                    </nav>
+                    <Nav_container nav_data = {nav_link_data} />
                 </Row>
             </Container>
         )
