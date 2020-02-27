@@ -17,7 +17,7 @@ const Nav_container = props =>{
     return(
         <HOC>
             {/*Normal nav*/}
-            <nav className={classSelector.nav_container}>
+            <nav className={`${classSelector.nav_container} large_nav`}>
                 {nav_li}
             </nav>
         </HOC>

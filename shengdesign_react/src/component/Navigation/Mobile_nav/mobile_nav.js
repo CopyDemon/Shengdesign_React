@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 //import script
 import classSelector from './mobile_nav.module.css';
@@ -15,11 +15,9 @@ import classSelector from './mobile_nav.module.css';
     return(
         <section id="mobile_nav_main_container" className={`${classSelector.mobile_nav_main_container}`}>
             <div className={`${classSelector.mobile_nav_bg}`}></div>
-            <div className={`justify-content-center`}>
-                <nav className={`${classSelector.mobile_nav_container}`}>
-                    {nav_li}
-                </nav>
-            </div>
+            <nav className={`${classSelector.mobile_nav_container} justify-content-center`}>
+                {nav_li}
+            </nav>
             <div className={`${classSelector.close_button_container}`} onClick={props.close_mobile_nav}></div>
         </section>
     )

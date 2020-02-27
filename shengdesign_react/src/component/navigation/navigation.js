@@ -3,7 +3,6 @@ import  { Container,Row}  from 'react-bootstrap';
 
 //import script
 import NavContainer from './nav_inner';
-import MobileNav from './Mobile_nav/mobile_nav';
 import classSelector from './nav.module.css';
 import MobilNav from './Mobile_nav/mobile_nav';
 
@@ -14,7 +13,7 @@ class Navigation extends Component{
     }
 
     Main_nav_hide_show = () =>{
-        
+
     }
 
     Mobile_nav_close_handler = () =>{

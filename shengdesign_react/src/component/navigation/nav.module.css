@@ -6,6 +6,12 @@
    z-index: 100;
 }
 
+/* @media(max-width:500px){
+   .large_nav{
+      display: none !important;
+   }
+} */
+
 .nav_row{
    position: relative;
    box-shadow: 0px 2px 8px #575757;
