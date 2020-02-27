@@ -1,3 +1,7 @@
+.fixed_nav_container{
+   position: fixed;
+}
+
 .nav_row{
    position: relative;
    box-shadow: 0px 2px 8px #575757;

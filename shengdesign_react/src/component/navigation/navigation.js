@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import  { Container,Row}  from 'react-bootstrap';
 
 //import script
-import Nav_container from './nav_inner';
+import NavContainer from './nav_inner';
 import classSelector from './nav.module.css';
 
 class Navigation extends Component{
@@ -14,14 +14,14 @@ class Navigation extends Component{
     render(){
         const nav_link_data = this.state.nav_data;
         return(
-            <Container fluid className="p-0">
+            <Container fluid className={`${classSelector.fixed_nav_container} p-0`}>
                 <Row className={`${classSelector.nav_row} justify-content-end bg-dark p-1`}>
                     <a href="/" className={classSelector.logo_container}>
                         <div className={classSelector.logo_inner_circle}>
                             <p href="/">SHENG</p>
                         </div>
                     </a>
-                    <Nav_container nav_data = {nav_link_data} />
+                    <NavContainer nav_data = {nav_link_data} />
                 </Row>
             </Container>
         )

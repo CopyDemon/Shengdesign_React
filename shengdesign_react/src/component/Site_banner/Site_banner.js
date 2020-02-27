@@ -2,17 +2,20 @@ import React, {Component} from 'react';
 //import sctipt
 import HOC from '../../HOC/HOC';
 import  Navigation from "../Navigation/navigation";
-import Banner_inner from './Banner_inner/Banner_inner';
+import BannerInner from './Banner_inner/Banner_inner';
 
 
 class Site_banner extends Component{
     state={}
-    
+
+    // componentDidMount (){
+    //     this.banner_margin_top();
+    // }
     render(){
         return(
             <HOC>
                 <Navigation />
-                <Banner_inner />
+                <BannerInner />
             </HOC>
         )
     }

@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 //import script
 import "./index.css";
-import Site_banner from "./component/Site_banner/Site_banner";
+import SiteBanner from "./component/Site_banner/Site_banner";
 
 //import pages
 import Home from "./pages/home/home";
@@ -19,7 +19,7 @@ import About from "./pages/about/about";
 function App() {
   return (
       <div className="App">
-        <Site_banner/>
+        <SiteBanner/>
         <Router>
           <Switch>
             <Route path="/" exact component={Home}/>
