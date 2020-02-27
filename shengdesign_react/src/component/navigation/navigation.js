@@ -13,8 +13,20 @@ class Navigation extends Component{
 
     render(){
         const nav_link_data = this.state.nav_data;
+        // const navbar_scroll_handler = () =>{
+        //     window.addEventListener('scroll', () => {
+        //         console.log(window.pageYOffset);
+        //         const site_nav = document.getElementById("nav_main_container");
+        //         window.pageYOffset
+        //         //window.pageYOffset >= site_nav.clientHeight ? site_nav.style.position = "fixed" : site_nav.style.position = "relative";
+        //         //site_nav >= site_nav.clientHeight ?  alert('great') : alert("not great");
+        //     })
+        // }
+
+        //navbar_scroll_handler();
+
         return(
-            <Container fluid className={`${classSelector.fixed_nav_container} p-0`}>
+            <Container fluid className={`${classSelector.fixed_nav_container} p-0`} id="nav_main_container">
                 <Row className={`${classSelector.nav_row} justify-content-end bg-dark p-1`}>
                     <a href="/" className={classSelector.logo_container}>
                         <div className={classSelector.logo_inner_circle}>

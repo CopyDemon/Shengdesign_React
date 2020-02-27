@@ -16,7 +16,7 @@ class Home extends Component{
         
         return(
             <Container fluid className="p-0">
-               <h1>Home Page</h1>
+               
             </Container>
         )
     }
