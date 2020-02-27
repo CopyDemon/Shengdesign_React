@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  { Container }  from 'react-bootstrap';
+//import  { Container }  from 'react-bootstrap';
 
 //import script
 import HOC from '../../HOC/HOC';

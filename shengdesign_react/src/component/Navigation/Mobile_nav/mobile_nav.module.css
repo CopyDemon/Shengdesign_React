@@ -1,0 +1,81 @@
+.mobile_nav_main_container{
+    position: fixed;
+    z-index:110;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: 1s ease-in-out;
+}
+
+.mobile_nav_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .9;
+}
+
+.mobile_nav_container{
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.mobile_nav_container > li {
+    list-style:none;
+    margin-top: 2vh;
+}
+
+.mobile_nav_container > li > a{
+    color: white;
+    font-size: 28px;
+    transition: .3s ease-in-out;
+}
+
+.mobile_nav_container > li > a::after{
+    content: '';
+    width: 0px;
+    height: 1px;
+    display:block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff006f;
+    border-bottom: 2px solid red;
+    transition: .4s ease-in-out;
+}
+
+.mobile_nav_container > li > a:hover{
+   text-decoration: none;
+}
+
+.mobile_nav_container > li > a:hover::after{
+    width: 50px;
+ }
+
+ .close_button_container{
+     position: absolute;
+     bottom: 10%;
+     left: 50%;
+     transform: translateX(-50%)rotate(5deg);
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     border: 1px solid white;
+     background-image:url('../../../Assets/image/return_arrow.png');
+     background-size: 50%;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+
+ .close_button_container:hover{
+    border:1px solid #ff006f;
+    background-color: #ff006f;
+}

@@ -3,12 +3,23 @@ import  { Container,Row}  from 'react-bootstrap';
 
 //import script
 import NavContainer from './nav_inner';
+import MobileNav from './Mobile_nav/mobile_nav';
 import classSelector from './nav.module.css';
+import MobilNav from './Mobile_nav/mobile_nav';
 
 class Navigation extends Component{
     state = {
         nav_data : { Home : "/", Works : "/works", About :"About" },
         brand_name : "SHENG"
+    }
+
+    Main_nav_hide_show = () =>{
+        
+    }
+
+    Mobile_nav_close_handler = () =>{
+        const mobile_nav_main_container = document.getElementById('mobile_nav_main_container');
+        mobile_nav_main_container.style.top ="-200%";
     }
 
     render(){
@@ -26,6 +37,7 @@ class Navigation extends Component{
                             <p>{this.state.brand_name}</p>
                         </span>
                     </a>
+                    <MobilNav nav_data={nav_link_data}  close_mobile_nav={this.Mobile_nav_close_handler}/>
                     <NavContainer nav_data = {nav_link_data} />
                 </Row>
             </Container>

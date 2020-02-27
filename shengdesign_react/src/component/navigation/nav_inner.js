@@ -1,5 +1,9 @@
 import React from 'react';
+//import script
+import HOC from '../../HOC/HOC';
 import classSelector from './nav.module.css';
+
+
 const Nav_container = props =>{
         const nav_item = Object.keys(props.nav_data);
         const nav_li = nav_item.map((item) => {
@@ -11,9 +15,12 @@ const Nav_container = props =>{
         });
 
     return(
-        <nav className={classSelector.nav_container}>
-            {nav_li}
-        </nav>
+        <HOC>
+            {/*Normal nav*/}
+            <nav className={classSelector.nav_container}>
+                {nav_li}
+            </nav>
+        </HOC>
     );
 }
 export default Nav_container;
