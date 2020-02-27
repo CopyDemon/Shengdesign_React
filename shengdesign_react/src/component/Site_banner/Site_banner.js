@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 //import sctipt
-import HOC from '../../HOC/HOC';
-import  Navigation from "../Navigation/navigation";
 import BannerInner from './Banner_inner/Banner_inner';
 
 
@@ -17,10 +15,7 @@ class Site_banner extends Component{
     render(){
         
         return(
-            <HOC>
-                <Navigation />
-                <BannerInner />
-            </HOC>
+            <BannerInner />
         )
     }
 }

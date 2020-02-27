@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 //import script
 import "./index.css";
 import SiteBanner from "./component/Site_banner/Site_banner";
+import Navigation from './component/Navigation/navigation';
 
 //import pages
 import Home from "./pages/home/home";
@@ -19,7 +20,7 @@ import About from "./pages/about/about";
 function App() {
   return (
       <div className="App">
-        <SiteBanner/>
+        <Navigation />
         <Router>
           <Switch>
             <Route path="/" exact component={Home}/>

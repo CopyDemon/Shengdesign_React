@@ -14,7 +14,8 @@ const Banner_inner = props =>{
         <Container 
             id="banner_inner" 
         >
-            <Row className={`${classSelector.banner_inner_main_container} justify-content-center col-lg-10 col-md-10 col-sm-12 mx-auto`}>
+            <Row 
+            className={`${classSelector.banner_inner_main_container}  col-lg-10 col-md-10 col-sm-12 mx-auto`}>
                 Banner inner
             </Row>
         </Container>
