@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import  { Container,Row}  from 'react-bootstrap';
 
 //import script
-import NavContainer from './nav_inner';
-import classSelector from './nav.module.css';
+import NormalNav from './normal_nav_inner';
 import MobilNav from './Mobile_nav/mobile_nav';
+import MobileHamburgerBar from './Hamburger_bar/Hamburger_bar';
+import classSelector from './nav.module.css';
+
 
 class Navigation extends Component{
     state = {
@@ -12,13 +14,20 @@ class Navigation extends Component{
         brand_name : "SHENG"
     }
 
-    Main_nav_hide_show = () =>{
+    // Main_nav_hide_show = () =>{
 
+    // }
+    Mobile_nav_open_handler = () =>{
+        const mobile_nav_main_container = document.getElementById('mobile_nav_main_container');
+        console.log(mobile_nav_main_container)
+        mobile_nav_main_container.style.top = "0%";
+        mobile_nav_main_container.style.borderRadius = "50%";
     }
 
     Mobile_nav_close_handler = () =>{
         const mobile_nav_main_container = document.getElementById('mobile_nav_main_container');
         mobile_nav_main_container.style.top ="-200%";
+        mobile_nav_main_container.style.borderRadius = "0";
     }
 
     render(){
@@ -36,8 +45,9 @@ class Navigation extends Component{
                             <p>{this.state.brand_name}</p>
                         </span>
                     </a>
+                    <MobileHamburgerBar openMobileNav={this.Mobile_nav_open_handler}/>
                     <MobilNav nav_data={nav_link_data}  close_mobile_nav={this.Mobile_nav_close_handler}/>
-                    <NavContainer nav_data = {nav_link_data} />
+                    <NormalNav nav_data = {nav_link_data} />
                 </Row>
             </Container>
         )

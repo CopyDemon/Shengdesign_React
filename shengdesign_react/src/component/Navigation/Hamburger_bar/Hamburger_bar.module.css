@@ -1,0 +1,23 @@
+.hamburger_bar_container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    padding: 10px;
+}
+
+@media(min-width:500px){
+    .hamburger_bar_container{
+        display: none;
+    }
+}
+
+.hamburger_bar_container > span {
+    width: 30px;
+    height: 2px;
+    background: white;
+}

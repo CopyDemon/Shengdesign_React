@@ -3,9 +3,9 @@
     z-index:110;
     width: 100vw;
     height: 100vh;
-    top: 0;
+    top: -200%;
     left: 0;
-    transition: 1s ease-in-out;
+    transition: .7s ease-in-out;
 }
 
 .mobile_nav_bg{
