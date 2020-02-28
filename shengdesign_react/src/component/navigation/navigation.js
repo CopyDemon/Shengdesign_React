@@ -3,6 +3,7 @@ import  { Container,Row}  from 'react-bootstrap';
 
 //import script
 import SiteNormalLogo from './Normal_logo/normal_logo';
+import SiteMobileLogo from './Mobile_logo/mobile_logo';
 import NormalNav from './Normal_nav/normal_nav_inner';
 import MobilNav from './Mobile_nav/mobile_nav';
 import MobileHamburgerBar from './Hamburger_bar/Hamburger_bar';
@@ -37,10 +38,8 @@ class Navigation extends Component{
         return(
             <Container fluid className={`${classSelector.fixed_nav_container}`} id="nav_main_container">
                 <Row className={`${classSelector.nav_row} justify-content-end bg-dark p-1`}>
-                    <span className={`${classSelector.mobile_logo}`} id="brand">
-                        <a href='/'>SHENG</a>
-                    </span>
                     <SiteNormalLogo brand_name = {this.state.brand_name}/>
+                    <SiteMobileLogo brand_name = {this.state.brand_name}/>
                     <MobileHamburgerBar openMobileNav={this.Mobile_nav_open_handler}/>
                     <MobilNav nav_data={nav_link_data}  close_mobile_nav={this.Mobile_nav_close_handler}/>
                     <NormalNav nav_data = {nav_link_data} />

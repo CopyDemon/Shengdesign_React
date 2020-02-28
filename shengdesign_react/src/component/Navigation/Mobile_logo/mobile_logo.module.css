@@ -1,0 +1,25 @@
+.mobile_logo{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0%;
+    left: 0%;
+    background-color: #ff006f;
+    border: 1px solid red;
+    height: 100%;
+    width: 100px;
+    text-align: center;
+ }
+ 
+ @media(min-width:500px){
+    .mobile_logo{
+       display: none;
+    }
+ }
+ 
+ .mobile_logo > a{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+ }
