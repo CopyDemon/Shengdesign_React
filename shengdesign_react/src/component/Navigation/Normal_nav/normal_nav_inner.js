@@ -1,7 +1,7 @@
 import React from 'react';
 //import script
-import HOC from '../../HOC/HOC';
-import classSelector from './nav.module.css';
+import HOC from '../../../HOC/HOC';
+import classSelector from './normal_nav.module.css';
 
 
 const Nav_container = props =>{

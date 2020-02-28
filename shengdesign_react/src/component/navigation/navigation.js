@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import  { Container,Row}  from 'react-bootstrap';
 
 //import script
-import NormalNav from './normal_nav_inner';
+import SiteNormalLogo from './Normal_logo/normal_logo';
+import NormalNav from './Normal_nav/normal_nav_inner';
 import MobilNav from './Mobile_nav/mobile_nav';
 import MobileHamburgerBar from './Hamburger_bar/Hamburger_bar';
 import classSelector from './nav.module.css';
@@ -36,15 +37,10 @@ class Navigation extends Component{
         return(
             <Container fluid className={`${classSelector.fixed_nav_container}`} id="nav_main_container">
                 <Row className={`${classSelector.nav_row} justify-content-end bg-dark p-1`}>
-                    <span className={`${classSelector.brand}`} id="brand">
+                    <span className={`${classSelector.mobile_logo}`} id="brand">
                         <a href='/'>SHENG</a>
                     </span>
-                    {/*Circle logo*/}
-                    <a href="/" className={classSelector.logo_container}>
-                        <span className={classSelector.logo_inner_circle}>
-                            <p>{this.state.brand_name}</p>
-                        </span>
-                    </a>
+                    <SiteNormalLogo brand_name = {this.state.brand_name}/>
                     <MobileHamburgerBar openMobileNav={this.Mobile_nav_open_handler}/>
                     <MobilNav nav_data={nav_link_data}  close_mobile_nav={this.Mobile_nav_close_handler}/>
                     <NormalNav nav_data = {nav_link_data} />
