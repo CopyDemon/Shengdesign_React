@@ -1,0 +1,23 @@
+*{
+    --dark_blue:#343a40;
+    --pink:#ff006f;
+
+    --pink_bg_shadow_dark:0px 1px 8px #343a40;
+    --pink_bg_shadow_light: 0px 2px 8px #fefefe;
+    /* border: 1px solid red; */
+}
+
+.justify_content_center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section_title{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--dark_blue);
+}

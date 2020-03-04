@@ -1,0 +1,19 @@
+.home_skills_tab{
+    margin-right: 10px;
+    padding: 20px 30px;
+    background: var(--pink);
+    color: white;
+    font-size: 18px;
+    box-shadow: var(--pink_bg_shadow_light);
+    transition: .5s ease-in-out;
+}
+
+.home_skills_tab:hover{
+    cursor: pointer;
+    box-shadow: var(--pink_bg_shadow_dark);
+    border-radius: 8px;
+}
+
+.home_skills_tab:last-child{
+    margin-right: 0;
+}
