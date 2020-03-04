@@ -17,10 +17,21 @@ const Skills = ( props ) =>{
     return(
         <Container>
             <Row>
-                <div className = {`${mainClassSelector.justify_content_center} col-lg-12 col-md-12 col-sm-12`}>
+                <div 
+                    className = {
+                        `${mainClassSelector.justify_content_center} 
+                        col-lg-12 col-md-12 col-sm-12`
+                    }
+                >
                     <p className = {`${mainClassSelector.section_title}`}>Skills</p>
                 </div>
-                <div className = {`${mainClassSelector.justify_content_center} ${classSelector.skills_tab_container} col-lg-12 col-md-12 col-sm-12`}>
+                <div 
+                    className = {
+                        `${mainClassSelector.justify_content_center} 
+                        ${classSelector.skills_tab_container} 
+                        col-lg-12 col-md-12 col-sm-12`
+                    }
+                >
                     {skills_tab}
                 </div>
                 
