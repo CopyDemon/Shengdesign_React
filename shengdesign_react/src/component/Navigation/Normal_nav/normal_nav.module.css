@@ -23,3 +23,14 @@
     text-decoration: none;
     color: #929292;
  }
+
+ .actived_nav_item::after{
+   content: "";
+   display: block;
+   position: relative;
+   width: 80%;
+   margin: auto;
+   background: #ff006f;
+   height: 2px;
+   transition: .7s ease-in-out;
+ }
