@@ -12,7 +12,7 @@ import classSelector from './nav.module.css';
 
 class Navigation extends Component{
     state = {
-        nav_data : { Home : "/", Works : "/works", About :"About" },
+        nav_data : { Home : "/", Works : "/Works", About :"About" },
         brand_name : "SHENG"
     }
 
