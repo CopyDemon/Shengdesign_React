@@ -3,8 +3,11 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import Test from './component/test_environment/test';
 
 //import script
-import "./index.css";
 import Navigation from './component/Navigation/navigation';
+
+//import css
+import "./index.css";
+import classSelector from './main.module.css';
 
 //import pages
 import Home from "./pages/home/home";

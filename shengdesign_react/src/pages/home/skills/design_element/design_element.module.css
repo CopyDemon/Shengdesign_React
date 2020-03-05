@@ -1,0 +1,46 @@
+.skills_desgin_element_container{
+    position: relative;
+    width: 100%;
+    border: 1px solid red;
+}
+
+@media(max-width:768px){
+    .skills_desgin_element_container{
+        display: none;
+    }
+}
+.skills_design_element_square{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 0;
+    top: 20%;
+    background-image:url('../../../../Assets/image/skills_square_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    z-index: 1;
+}
+
+.skills_design_element_circle{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    right: 15%;
+    top: 50%;
+    background: var(--pink_green);
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.skills_design_element_line{
+    position: relative;
+    width: 2px;
+    height: 350px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(-45deg);
+    background: var(--dark_blue);
+    z-index: 2;
+    border-radius: 50%;
+}

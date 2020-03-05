@@ -7,7 +7,10 @@ import SiteMobileLogo from './Mobile_logo/mobile_logo';
 import NormalNav from './Normal_nav/normal_nav_inner';
 import MobilNav from './Mobile_nav/mobile_nav';
 import MobileHamburgerBar from './Hamburger_bar/Hamburger_bar';
+
+//css
 import classSelector from './nav.module.css';
+import animationSelector from './nav_animation.module.css';
 
 
 class Navigation extends Component{
@@ -38,7 +41,7 @@ class Navigation extends Component{
         return(
             <Container fluid className={`${classSelector.fixed_nav_container}`} id="nav_main_container">
                 <Row className={`${classSelector.nav_row} justify-content-end bg-dark p-1`}>
-                    <SiteNormalLogo brand_name = {this.state.brand_name}/>
+                    <SiteNormalLogo brand_name = {this.state.brand_name} className={`${animationSelector.site_normal_logo_animation}`}/>
                     <SiteMobileLogo brand_name = {this.state.brand_name}/>
                     <MobileHamburgerBar openMobileNav={this.Mobile_nav_open_handler}/>
                     <MobilNav nav_data={nav_link_data}  close_mobile_nav={this.Mobile_nav_close_handler}/>

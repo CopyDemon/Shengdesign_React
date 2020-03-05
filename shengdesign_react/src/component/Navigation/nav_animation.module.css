@@ -1,0 +1,15 @@
+.site_normal_logo_animation{
+    display: none !important;
+    transition:1s ease-in-out;
+    animation: site_normal_logo_animation 2s;
+}
+
+@keyframes site_normal_logo_animation{
+    from{
+        left: 50%;
+    }
+
+    to{
+        left:10%
+    }
+}
