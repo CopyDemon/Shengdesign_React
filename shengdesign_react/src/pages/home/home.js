@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import  { Container }  from 'react-bootstrap';
 
 //import script
+import HOC from '../../HOC/HOC';
 import HocLgBannerContentContainer from '../../HOC/Hoc_lg_banner_content_container/Hoc_lg_banner_content_container';
 import Skills from './skills/skills';
 
@@ -11,9 +12,10 @@ import Skills from './skills/skills';
 class Home extends Component{
     render(){
         return(
-            <HocLgBannerContentContainer>
-                <Skills />
-            </HocLgBannerContentContainer>
+            <HOC>
+                <Skills id="skills"/>
+                <div id="text"></div>
+            </HOC>
 
         )
     }

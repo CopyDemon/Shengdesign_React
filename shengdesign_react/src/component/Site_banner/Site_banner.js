@@ -16,7 +16,7 @@ class Site_banner extends Component{
         
         return(
             <section className={`container-fluid p-0 m-0`}>
-                <div className={`row col-lg-12 col-md-12 col-sm-12 mx-auto`}>
+                <div className={`row col-lg-12 col-md-12 col-sm-12 mx-auto p-0 m-0`}>
                     <HomeBanner />
                 </div>
             </section>

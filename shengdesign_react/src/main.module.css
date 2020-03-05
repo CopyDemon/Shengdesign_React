@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     --dark_blue:#343a40;
     --pink:#ff006f;
@@ -6,6 +10,11 @@
     --pink_bg_shadow_dark:0px 1px 8px #343a40;
     --pink_bg_shadow_light: 0px 2px 8px #fefefe;
     /* border: 1px solid red; */
+
+    --title_font_size_lg:60px;
+    --title_font_size_md:40px;
+    --title_font_size_sm:25px;
+
 }
 
 .app{
