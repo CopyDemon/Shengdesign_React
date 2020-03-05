@@ -1,9 +1,10 @@
 import  React from 'react';
 
 //import css
-import classSelector from './design_element.module.css'
+import classSelector from './design_element.module.css';
 
-const skills_section_design_element = () =>{
+
+const Skills_section_design_element = () =>{
     return(
         <div className={`${classSelector.skills_desgin_element_container} col-lg-6 col-md-6 col-sm-12`}>
             <div className={`${classSelector.skills_design_element_square}`}></div>
@@ -14,4 +15,4 @@ const skills_section_design_element = () =>{
     )
 }
 
-export default skills_section_design_element;
+export default Skills_section_design_element;
