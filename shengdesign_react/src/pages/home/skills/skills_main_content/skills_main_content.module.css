@@ -1,3 +1,9 @@
+.skills_text_container{
+    position: relative;
+    z-index:5;
+    margin-bottom: 50px;
+}
+
 .skills_text{
     font-size: 50px;
     font-weight: bold;
@@ -26,8 +32,13 @@
 
 /******************************/
 
-.skill_tab_container{
-
+@media(max-width:600px){
+    .skills_tab_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .skills_tab_inner_container{
@@ -38,14 +49,19 @@
 
 .home_skills_tab{
     margin-bottom: 30px;
-    padding: 20px 30px;
     margin-right: 20px;
+    padding: 20px 30px;
     background: var(--pink);
     color: white;
     font-size: 18px;
     box-shadow: var(--pink_bg_shadow_light);
     transition: .5s ease-in-out;
 }
+
+.home_skills_tab:last-child{
+    margin-right: 0;
+}
+
 
 .home_skills_tab:hover{
     cursor: pointer;

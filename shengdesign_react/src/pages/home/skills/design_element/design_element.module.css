@@ -1,7 +1,7 @@
 .skills_desgin_element_container{
     position: relative;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 @media(max-width:768px){
@@ -9,6 +9,7 @@
         display: none;
     }
 }
+
 .skills_design_element_square{
     position: absolute;
     width: 300px;
@@ -20,6 +21,14 @@
     background-size: cover;
     background-position:center;
     z-index: 1;
+}
+
+.skills_design_element_square_inner{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    background: var(--pink);
 }
 
 .skills_design_element_circle{
