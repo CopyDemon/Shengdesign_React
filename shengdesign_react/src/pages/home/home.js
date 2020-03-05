@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 //import  { Container }  from 'react-bootstrap';
 
 //import script
@@ -9,8 +9,7 @@ import Skills from './skills/skills';
 //import data
 // import nav_db from "./nav_db";
 
-class Home extends Component{
-    render(){
+const Home = () =>{
         return(
             <HOC>
                 <Skills id="skills"/>
@@ -18,7 +17,6 @@ class Home extends Component{
             </HOC>
 
         )
-    }
 }
 
 export default Home;
