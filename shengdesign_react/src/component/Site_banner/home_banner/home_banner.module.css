@@ -1,0 +1,13 @@
+.home_banner_container{
+    position: fixed;
+    top:0;
+    left: 0;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    background-image:url('../../../Assets/image/match.jpeg');
+    background-size: 35%;
+    background-position-x: 75%;
+    background-position-y:0%;
+    background-repeat: no-repeat;
+}

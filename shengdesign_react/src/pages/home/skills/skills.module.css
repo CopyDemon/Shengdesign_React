@@ -1,8 +1,12 @@
-.skills_content_main_container{
+.row{
+    position: relative;
+}
+
+/* .skills_content_main_container{
     position: relative;
     width: 100%;
     padding: 20px 30px;
-}
+} */
 /*****************************/
 
 /*****************************/

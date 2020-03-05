@@ -1,0 +1,8 @@
+.Hoc_lg_banner_content_container{
+    margin-top: 100vh !important;
+    position: relative;
+    z-index: 4;
+    height: 100%;
+    padding: 30px 0px;
+    background-color: white;
+}
