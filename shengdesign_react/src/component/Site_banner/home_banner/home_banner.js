@@ -53,7 +53,7 @@ const Home_banner = () =>{
     // const executeScroll = () => scrollToRef(myRef);
 
     return(
-        <div className={`${classSelector.home_banner_container} p-0`}>
+        <div className={`${classSelector.home_banner_container} p-0 col-lg-10 col-md-10 col-sm-12`}>
             <div className={`${classSelector.home_banner_image_container}`} id="home_banner_image_container"></div>
             <div className={`${classSelector.home_banner_content_container}`}>
                 {rendered_home_banner_title}
