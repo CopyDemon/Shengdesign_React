@@ -1,0 +1,14 @@
+.social_share_main_container{
+    width: 100%;
+    padding-top: var(--pt_sm);
+    padding-bottom: var(--pb_sm);
+    margin-bottom:var(--mb_sm);
+    text-align: center;
+}
+
+.social_share_title{
+    font-size: var(--title_font_size_sm);
+    font-weight: bold;
+    color: var(--dark_blue);
+}
+

@@ -14,7 +14,54 @@ html{
     --title_font_size_lg:60px;
     --title_font_size_md:40px;
     --title_font_size_sm:25px;
+/*margin*/
+    --mt_lg:100px;
+    --mt_md:50px;
+    --mt_sm:25px;
 
+    --mb_lg:100px;
+    --mb_md:50px;
+    --mb_sm:25px;
+
+    --ml_lg:100px;
+    --ml_md:50px;
+    --ml_sm:25px;
+
+    --mr_lg:100px;
+    --mr_md:50px;
+    --mr_sm:25px;
+
+/*padding*/
+    --pt_lg:100px;
+    --pt_md:50px;
+    --pt_sm:25px;
+
+    --pb_lg:100px;
+    --pb_md:50px;
+    --pb_sm:25px;
+
+    --pl_lg:100px;
+    --pl_md:50px;
+    --pl_sm:25px;
+
+    --pr_lg:100px;
+    --pr_md:50px;
+    --pr_sm:25px;
+}
+
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+code {
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 .app{
