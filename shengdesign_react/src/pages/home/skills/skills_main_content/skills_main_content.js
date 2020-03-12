@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import classSelector from './skills_main_content.module.css';
 
 const Skills_main_content = (props) => {
-    const [skills_main_content_data, setSkills] = useState({
+    const [skills_main_content_data] = useState({
         skills_title_text:['Unlimitied Web', 'Development & Design', 'Skills.'],
         main_skills:['Frontend', 'Backend']
     });

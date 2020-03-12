@@ -8,6 +8,7 @@ html{
     --pink_green:#27e6cf;
 
     --pink_bg_shadow_dark:0px 1px 8px #343a40;
+    --pink_bg_shadow_md: 0px 2px 8px #6f6f6f;
     --pink_bg_shadow_light: 0px 2px 8px #fefefe;
     /* border: 1px solid red; */
 

@@ -8,7 +8,7 @@ import SiteBanner from './component/Site_banner/Site_banner';
 
 //import css
 import "./index.css";
-import classSelector from './main.module.css';
+// import classSelector from './main.module.css';
 
 //import pages
 import Home from "./pages/home/home";

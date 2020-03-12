@@ -3,7 +3,7 @@ import React from 'react';
 
 //import script
 import HOC from '../../HOC/HOC';
-import HocLgBannerContentContainer from '../../HOC/Hoc_lg_banner_content_container/Hoc_lg_banner_content_container';
+//import HocLgBannerContentContainer from '../../HOC/Hoc_lg_banner_content_container/Hoc_lg_banner_content_container';
 import Skills from './skills/skills';
 
 //import data

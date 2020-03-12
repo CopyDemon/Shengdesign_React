@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 
 //import css
 import classSelector from './home_banner.module.css';
@@ -11,7 +11,7 @@ import building_black from '../../../Assets/image/building_black.jpg';
 import phpcode from '../../../Assets/image/phpcode.jpg';
 
 const Home_banner = () =>{
-    const[home_banner_data, set_home_banner_data] = useState({
+    const[home_banner_data] = useState({
         home_banner_title : [
             'Welcome to site',
             'Learning and get smart', 
@@ -39,7 +39,6 @@ const Home_banner = () =>{
                 count = 0;
             }
             home_banner_image_container.style.backgroundImage = `url("${home_banner_image_data[count]}")`;
-            console.log(home_banner_image_data[count])
         },3000)
     });
     //render title
@@ -57,7 +56,7 @@ const Home_banner = () =>{
             <div className={`${classSelector.home_banner_image_container}`} id="home_banner_image_container"></div>
             <div className={`${classSelector.home_banner_content_container}`}>
                 {rendered_home_banner_title}
-                <button className={`${classSelector.home_banner_link}`}>{home_banner_data.home_banner_link}</button>
+                <a href="#social_share_row"className={`${classSelector.home_banner_link}`}>{home_banner_data.home_banner_link}</a>
             </div>
         </div>
     )

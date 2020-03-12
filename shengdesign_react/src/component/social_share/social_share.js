@@ -1,43 +1,58 @@
 import React,{ useState } from 'react';
+
+//import css
 import classSelector from './social_share.module.css';
 
+
+//import image
+import facebook_social_icon from '../../Assets/image/social_icon/facebook.png';
+import twitter_social_icon from '../../Assets/image/social_icon/twitter.png';
+import linkedin_social_icon from '../../Assets/image/social_icon/linkedin.png';
+import github_social_icon from '../../Assets/image/social_icon/github.png';
+
 const SocialShare = (props) =>{
-    const [socialState, setSocialState] = useState({
-        facebook:{
+    const[social_state] = useState([
+        {
             name:'Facebook',
             link:'#',
-            icon:'../../Assets/image/social_icon/facebook.png'
+            icon:facebook_social_icon
         },
-        twitter:{
+        {
             name:'Twitter',
             link:'#',
-            icon:'../../Assets/image/social_icon/twitter.png'
+            icon:twitter_social_icon
         },
-        linkedin:{
+        {
             name:'Linkedin',
             link:'#',
-            icon:'../../Assets/image/social_icon/linkedin.png'
+            icon:linkedin_social_icon
         },
-        github:{
+        {
             name:'Github',
             link:'#',
-            icon:'../../Assets/image/social_icon/github.png'
+            icon:github_social_icon
         }
+    ]);
+
+    //map social share btn
+    const display_social = social_state.map((item, index) => {
+        console.log(item)
+        return(
+            <a href={item.link} key={"display_social: " + item + index}>
+                <img src={item.icon} className={`${classSelector.social_share_icon}`} alt={item}/>
+                {/* {item.name} */}
+            </a>
+        ) 
     })
 
-    // const display_social_share = social.State.map((item)=>{
-    //     console.log('ok' + item)
-    // })
     return (
-        <section className={`${classSelector.social_share_main_container}`}>
+        <section className={`${classSelector.social_share_main_container}`} id="social_share_row">
             <article className={`${classSelector.social_share_content_container}`}>
                 <p className={`${classSelector.social_share_title}`}>Share With Your Friend</p>
                 <div className={`${classSelector.social_share_icon_container}`}>
-
+                    {display_social}
                 </div>
             </article>
-
-
         </section>   
     )
 }

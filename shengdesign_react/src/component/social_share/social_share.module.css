@@ -4,11 +4,28 @@
     padding-bottom: var(--pb_sm);
     margin-bottom:var(--mb_sm);
     text-align: center;
+    background-image: url('../../Assets/image/social_share_row_bg.jpg');
+    background-size:contain;
+    background-attachment: fixed;
 }
 
 .social_share_title{
     font-size: var(--title_font_size_sm);
     font-weight: bold;
-    color: var(--dark_blue);
+    color: white;
 }
 
+.social_share_icon{
+    width: 50px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.social_share_icon::last-child{
+    margin-right: 0;
+}
+
+.social_share_icon:hover{
+    box-shadow: var(--pink_bg_shadow_dark);
+}
