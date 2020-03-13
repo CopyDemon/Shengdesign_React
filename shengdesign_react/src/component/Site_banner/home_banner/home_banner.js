@@ -27,6 +27,7 @@ const Home_banner = () =>{
     });
 
     useEffect(()=>{
+
         //home banner bg image loop
         const home_banner_image_container = document.getElementById("home_banner_image_container");
         const home_banner_image_data = home_banner_data.home_banner_image_url;
@@ -41,24 +42,23 @@ const Home_banner = () =>{
             home_banner_image_container.style.backgroundImage = `url("${home_banner_image_data[count]}")`;
         },3000)
     });
+
     //render title
     const home_banner_title_data = home_banner_data.home_banner_title;
     const rendered_home_banner_title = home_banner_title_data.map((item, index) =>{
         return <p className = {`${classSelector.home_banner_title_content}`} key={item + index}>{item}</p>
     });
 
-    //link smooth scroll to skills
-    // const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
-    // const executeScroll = () => scrollToRef(myRef);
-
     return(
-        <div className={`${classSelector.home_banner_container} p-0 col-lg-10 col-md-10 col-sm-12`}>
-            <div className={`${classSelector.home_banner_image_container}`} id="home_banner_image_container"></div>
-            <div className={`${classSelector.home_banner_content_container}`}>
-                {rendered_home_banner_title}
-                <a href="#social_share_row"className={`${classSelector.home_banner_link}`}>{home_banner_data.home_banner_link}</a>
+        <section className={`${classSelector.home_banner_row} row col-lg-12 col-md-12 col-sm-12 p-0 m-0 mx-auto`}>
+            <div className={`${classSelector.home_banner_main_container}`}>
+                <div className={`${classSelector.home_banner_content_container}`}>
+                    {rendered_home_banner_title}
+                    <a href="#social_share_row"className={`${classSelector.home_banner_link}`}>{home_banner_data.home_banner_link}</a>
+                </div>
+                <div className={`${classSelector.home_banner_image_container}`} id="home_banner_image_container"></div>
             </div>
-        </div>
+        </section>
     )
 }
 

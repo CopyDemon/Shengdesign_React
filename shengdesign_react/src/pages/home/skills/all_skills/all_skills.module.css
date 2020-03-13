@@ -1,0 +1,29 @@
+.all_skills_main_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: var(--z_index_ex);
+    background: white;
+}
+
+.all_skills_title{
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    font-size: var(--title_font_size_lg);
+    font-weight: bold;
+    color: var(--pink);
+    transform: rotateZ(-90deg);
+    z-index: var(--z_index_ex);
+}
+
+.all_skills_content_container{
+    position: fixed;
+    width: 80vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background: #000;
+}

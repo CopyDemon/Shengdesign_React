@@ -3,9 +3,21 @@ html{
 }
 
 *{
+/*screen brake*/
+    --screen_lg:1050px;
+    --screen_md:600px;
+    --screen_sm:400px;
+/*z-index*/
+    --z_index_ex: 110;
+    --z_index_nav:100;
+    --z_index_top:50;
+    --z_index_md:25;
+    --z_index_lower:-10; 
+
     --dark_blue:#343a40;
     --pink:#ff006f;
     --pink_green:#27e6cf;
+    --yellow: #ffff00;
 
     --pink_bg_shadow_dark:0px 1px 8px #343a40;
     --pink_bg_shadow_md: 0px 2px 8px #6f6f6f;

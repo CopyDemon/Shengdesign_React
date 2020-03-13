@@ -11,7 +11,11 @@ import linkedin_social_icon from '../../Assets/image/social_icon/linkedin.png';
 import github_social_icon from '../../Assets/image/social_icon/github.png';
 
 const SocialShare = (props) =>{
-    const[social_state] = useState([
+    const [social_share_content] = useState({
+        title : "Share With Your Friend 👍"
+    })
+
+    const[social_share_btn_state] = useState([
         {
             name:'Facebook',
             link:'#',
@@ -33,14 +37,14 @@ const SocialShare = (props) =>{
             icon:github_social_icon
         }
     ]);
+    
 
     //map social share btn
-    const display_social = social_state.map((item, index) => {
+    const display_social = social_share_btn_state.map((item, index) => {
         console.log(item)
         return(
             <a href={item.link} key={"display_social: " + item + index}>
                 <img src={item.icon} className={`${classSelector.social_share_icon}`} alt={item}/>
-                {/* {item.name} */}
             </a>
         ) 
     })
@@ -48,11 +52,12 @@ const SocialShare = (props) =>{
     return (
         <section className={`${classSelector.social_share_main_container}`} id="social_share_row">
             <article className={`${classSelector.social_share_content_container}`}>
-                <p className={`${classSelector.social_share_title}`}>Share With Your Friend</p>
+                <p className={`${classSelector.social_share_title}`}>{social_share_content.title}</p>
                 <div className={`${classSelector.social_share_icon_container}`}>
                     {display_social}
                 </div>
             </article>
+            <div className={`${classSelector.social_share_container_color_overlay}`}></div>
         </section>   
     )
 }

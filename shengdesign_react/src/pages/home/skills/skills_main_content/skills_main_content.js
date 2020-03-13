@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+//import script
+import AllSkills from '../all_skills/all_skills';
 //import css
 import classSelector from './skills_main_content.module.css';
 
@@ -22,12 +24,15 @@ const Skills_main_content = (props) => {
 
     return(
         <div className={`${classSelector.skills_content_main_container} col-lg-6 col-md-6 col-sm-12`}>
-            <div className={`${classSelector.skills_text_container}`}>
-                {rendered_skills_title_text}
-            </div>
-            <div className={`${classSelector.skills_tab_container}`}>
-                {skills_tab}
-            </div>
+            {/* <div className="col-lg-6 col-md-6 col-sm-12"> */}
+                <div className={`${classSelector.skills_text_container}`}>
+                    {rendered_skills_title_text}
+                </div>
+                <div className={`${classSelector.skills_tab_container}`}>
+                    {skills_tab}
+                </div>
+            {/* </div> */}
+            {/* <AllSkills /> */}
         </div>
     )
 }
