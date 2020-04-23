@@ -7,21 +7,21 @@ import classSelector from './home_banner.module.css';
 //import image
 import match_image from '../../../Assets/image/cat.jpeg';
 import cat_image from '../../../Assets/image/match.jpeg';
-import building_black from '../../../Assets/image/building_black.jpg';
-import phpcode from '../../../Assets/image/phpcode.jpg';
+import building_black_image from '../../../Assets/image/building_black.jpg';
+import phpcode_image from '../../../Assets/image/phpcode.jpg';
 
 const Home_banner = () =>{
     const[home_banner_data] = useState({
         home_banner_title : [
-            'Welcome to site',
+            'Welcome to SHENG DEV',
             'Learning and get smart', 
             'Everyday!'
         ],
         home_banner_image_url:[
             cat_image,
             match_image,
-            building_black,
-            phpcode
+            building_black_image,
+            phpcode_image
         ],
         home_banner_link:'Explore Now'
     });
@@ -40,7 +40,7 @@ const Home_banner = () =>{
                 count = 0;
             }
             home_banner_image_container.style.backgroundImage = `url("${home_banner_image_data[count]}")`;
-        },3000)
+        },2000)
     });
 
     //render title
@@ -56,8 +56,8 @@ const Home_banner = () =>{
                     {rendered_home_banner_title}
                     <a href="#social_share_row"className={`${classSelector.home_banner_link}`}>{home_banner_data.home_banner_link}</a>
                 </div>
-                <div className={`${classSelector.home_banner_image_container}`} id="home_banner_image_container"></div>
             </div>
+            <div className={`${classSelector.home_banner_image_container}`} id="home_banner_image_container"></div>
         </section>
     )
 }
