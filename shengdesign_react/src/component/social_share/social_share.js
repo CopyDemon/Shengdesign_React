@@ -18,22 +18,22 @@ const SocialShare = (props) =>{
     const[social_share_btn_state] = useState([
         {
             name:'Facebook',
-            link:'#',
+            link:'https://www.shengdesign.com',
             icon:facebook_social_icon
         },
         {
             name:'Twitter',
-            link:'#',
+            link:'https://www.shengdesign.com',
             icon:twitter_social_icon
         },
         {
             name:'Linkedin',
-            link:'#',
+            link:'https://www.shengdesign.com',
             icon:linkedin_social_icon
         },
         {
             name:'Github',
-            link:'#',
+            link:'https://www.shengdesign.com',
             icon:github_social_icon
         }
     ]);
