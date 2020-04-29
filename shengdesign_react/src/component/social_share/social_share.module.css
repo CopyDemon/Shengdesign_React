@@ -3,7 +3,7 @@
 	width: 100%;
 	padding-top: var(--pt_sm);
 	padding-bottom: var(--pb_sm);
-	margin-bottom: var(--mb_sm);
+	margin-bottom: var(--mb_md);
 	text-align: center;
 	/* background-image: url('../../Assets/image/social_share_row_bg.jpg'); */
 	background-size: contain;
@@ -46,4 +46,38 @@
 .social_share_icon:hover {
 	box-shadow: var(--pink_bg_shadow_dark);
 	transform: scale(1.1);
+}
+
+.github_link {
+	width: 200px;
+	height: 50px;
+	display: inline-block;
+	/* display: flex;
+	flex-direction: row;
+	align-items: center; */
+	align-content: flex-end;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: var(--mt_sm);
+	padding-left: var(--pl_sm);
+	padding-right: var(--pr_sm);
+	color: var(--dark_blue);
+	text-decoration: none;
+	border-radius: 12px;
+	background: var(--dark_blue);
+	background-image: url('../../Assets/image/social_icon/github.png');
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: .4s ease-in-out;
+}
+
+.github_link:hover {
+	cursor: pointer;
+	color: var(--white);
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 30px;
+	line-height: 50px;
+	background-position-x: 0;
 }
