@@ -48,7 +48,7 @@ const Skills_main_content = (props) => {
             <div className={`${classSelector.skills_tab_container}`}>
                 {skills_tab}
             </div>
-            <AllSkills show_skills={skills_main_content_data.show_skills}/>
+            <AllSkills show_skills={skills_main_content_data.show_all_skills}/>
         </div>
     )
 }

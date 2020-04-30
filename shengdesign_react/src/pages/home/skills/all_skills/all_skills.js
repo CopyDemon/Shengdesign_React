@@ -11,6 +11,10 @@ const AllSkills = (props) =>{
             backend_title: 'Background Skills'
         }
     );
+    
+    if(props.show_skills){
+        document.querySelector('.all_skills_main_container').style.display="block";
+    }
 
     return(
         <div className={`${classSelector.all_skills_main_container} row col-lg-12 col-md-12 col-sm-12 px-0 mx-0`}>
