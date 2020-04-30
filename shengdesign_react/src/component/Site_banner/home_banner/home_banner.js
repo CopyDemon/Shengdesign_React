@@ -10,7 +10,7 @@ import cat_image from '../../../Assets/image/match.jpeg';
 import building_black_image from '../../../Assets/image/building_black.jpg';
 import phpcode_image from '../../../Assets/image/phpcode.jpg';
 
-const Home_banner = () =>{
+const Home_banner = (props) =>{
     const[home_banner_data] = useState({
         home_banner_title : [
             'Welcome to SHENG DEV',

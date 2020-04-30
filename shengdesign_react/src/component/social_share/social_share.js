@@ -8,7 +8,6 @@ import classSelector from './social_share.module.css';
 import facebook_social_icon from '../../Assets/image/social_icon/facebook.png';
 import twitter_social_icon from '../../Assets/image/social_icon/twitter.png';
 import linkedin_social_icon from '../../Assets/image/social_icon/linkedin.png';
-import github_social_icon from '../../Assets/image/social_icon/github.png';
 
 const SocialShare = (props) =>{
     //state for social share title
@@ -77,7 +76,7 @@ const SocialShare = (props) =>{
                 <div className={`${classSelector.social_share_icon_container}`}>
                     {display_social}
                 </div>
-                <a href={github_link_state.github_url} className={`${classSelector.github_link}`} id="github_link"></a>
+                <a href={github_link_state.github_url} className={`${classSelector.github_link}`} id="github_link">Github</a>
             </div>
             
             

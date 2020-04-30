@@ -1,0 +1,30 @@
+.all_skills_title_svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: all_skills_title_svg_fill 1s ease-in-out forwards 2.4s;
+}
+
+.title_path {
+	stroke-dasharray: 2871px !important;
+	stroke-dashoffset: 2871px;
+	animation: all_skills_title_svg_border_animation 8s ease-in-out forwards;
+}
+
+@keyframes all_skills_title_svg_border_animation {
+	to {
+		stroke-dashoffset: 0px;
+	}
+}
+
+@keyframes all_skills_title_svg_fill {
+	from {
+		fill: transparent;
+		top: 50%;
+	}
+	to {
+		top: 20%;
+		fill: white;
+	}
+}
