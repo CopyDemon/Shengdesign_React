@@ -1,27 +1,41 @@
 import React, { useState, useEffect } from 'react';
+//import redux
+import {useSelector,useDispatch} from 'react-redux';
+import {show_all_skills} from '../../../../REDUX/action/show_all_skills';
 
 //import script
 import AllSkills from '../all_skills/all_skills';
+
 //import css
 import classSelector from './skills_main_content.module.css';
 
 const Skills_main_content = (props) => {
+    //redux var
+    const show_or_hide_all_skills = useSelector(state => state.skillsReducer);
+    const dispatch = useDispatch();
+
     //state
     const [skills_main_content_data, set_skills_main_content_data] = useState({
         skills_title_text:['Unlimitied Web', 'Development & Design', 'Skills.'],
-        main_skills:["let's view"],
-        show_all_skills:false
+        main_skills:["let's view"]
     });
-    console.log(skills_main_content_data.show_all_skills)
 
     //functions
-    //let's view btn click show_all_skills = true;
-    const view_skills_btn_click = () => {
-        let copy_skills_main_countent_data = skills_main_content_data;
-        copy_skills_main_countent_data.show_all_skills = true;
-        set_skills_main_content_data(copy_skills_main_countent_data);
-    };
+    useEffect(()=>{
+        //dispatch(show_all_skills())
+        const show_all_skills = () =>{
+            dispatch(show_all_skills())
+            let all_skills_main_container = document.querySelector('.all_skills_main_container');
+            if(show_or_hide_all_skills){
+                all_skills_main_container.style.display = "true";
+            }else{
+                all_skills_main_container.style.display = "none";
+            }
+            console.log(show_or_hide_all_skills);
+        }
+    })
 
+    
 
     //all maps
     //map content
@@ -34,7 +48,7 @@ const Skills_main_content = (props) => {
     const main_skills = skills_main_content_data.main_skills;
     const skills_tab = main_skills.map((item, index) => {
         return <span
-                onClick={view_skills_btn_click} 
+                onClick={()=>{dispatch(show_all_skills())}} 
                 className = {`${classSelector.home_skills_tab} view_skill_btn`} 
                 key = {item + index}>
                     {item}
@@ -48,7 +62,7 @@ const Skills_main_content = (props) => {
             <div className={`${classSelector.skills_tab_container}`}>
                 {skills_tab}
             </div>
-            <AllSkills show_skills={skills_main_content_data.show_all_skills}/>
+            <AllSkills />
         </div>
     )
 }
