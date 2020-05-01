@@ -24,3 +24,19 @@
 .skills_icon_card_container {
 	color: white;
 }
+
+.skill_card {
+	width: 100px;
+	height: 250px;
+	border: 1px solid white;
+}
+.skill_card > i {
+	width: 100px;
+	height: 200px;
+}
+
+.fab {
+	width: 100px;
+	height: 100px;
+	color: white;
+}
