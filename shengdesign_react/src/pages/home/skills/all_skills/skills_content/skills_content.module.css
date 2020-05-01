@@ -1,0 +1,22 @@
+.skills_content_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow-y: scroll;
+    background: black;
+    /* border-radius: 12px; */
+    animation: skills_content_container_animation 1s ease-in-out 3s forwards;
+}
+
+@keyframes skills_content_container_animation{
+    from{
+        width:0px;
+        height:0px
+    }
+
+    to{
+        width:70vw;
+        height:60vh;
+    }
+}

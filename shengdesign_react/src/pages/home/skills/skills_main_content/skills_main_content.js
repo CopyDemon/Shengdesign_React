@@ -31,7 +31,6 @@ const Skills_main_content = (props) => {
             }else{
                 all_skills_main_container.style.display = "none";
             }
-            console.log(show_or_hide_all_skills);
         }
     })
 
