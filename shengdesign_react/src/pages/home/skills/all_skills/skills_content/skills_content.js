@@ -52,20 +52,19 @@ const SkillsContent = () =>{
     // function
     //map db and create icons
     const skills_cards = Object.keys(skills_content).map(el=>{
-        return[...Array(skills_content[el])].map((el)=>{
+        return[...Array(skills_content[el])].map((el,index)=>{
             return(
-                <div className={`${classSelector.skill_card}`}>
-                    <i className={`fab ${el.icon}`}></i>
+                <div className={`${classSelector.skill_card}`} key={index}>
+                    <div className={`${classSelector.skill_card_bg}`}></div>
+                    <i className={`fab ${el.icon} ${classSelector.skills_icon}`}></i>
                 </div>
             )
         })
     });
 
     return(
-        <div className={`${classSelector.skills_content_container}`}>
+        <div className={`${classSelector.skills_content_container} ${classSelector.skills_content_flex}`}>
             {skills_cards}
-            <i className="fab fa-html5"></i>
-            <i className="fab fa-html5"></i>
         </div>
     )
 }

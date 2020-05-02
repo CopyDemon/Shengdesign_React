@@ -2,6 +2,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	width: 70vw;
 	transform: translate(-50%, -50%);
 	animation: all_skills_title_svg_fill 1s ease-in-out forwards 2.4s;
 }

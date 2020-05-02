@@ -1,11 +1,15 @@
+/*skill container*/
 .skills_content_container {
 	position: absolute;
+	width: 0px;
+	height: 0px;
+	padding: 0;
+	margin: 0;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	overflow-y: scroll;
-	background: black;
-	/* border-radius: 12px; */
+	background: #040714;
 	animation: skills_content_container_animation 1s ease-in-out 3s forwards;
 }
 
@@ -13,30 +17,105 @@
 	from {
 		width: 0px;
 		height: 0px;
+		justify-content: space-around;
 	}
 
 	to {
 		width: 70vw;
 		height: 60vh;
+		padding: 30px;
+		justify-content: start;
 	}
 }
 
-.skills_icon_card_container {
-	color: white;
+.skills_content_flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
+/*skill card*/
 .skill_card {
-	width: 100px;
-	height: 250px;
-	border: 1px solid white;
-}
-.skill_card > i {
-	width: 100px;
+	position: relative;
+	opacity: 0;
+	flex-basis: 30%; /*this can be seen as width*/
 	height: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 20px;
+	margin-bottom: 10px;
+	animation: skill_card_animation 2s ease-in-out forwards 4s;
 }
 
-.fab {
-	width: 100px;
-	height: 100px;
+.skill_card:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: -2px;
+	bottom: -2px;
+	left: -2px;
+	right: -2px;
+	background: white;
+}
+
+.skill_card:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: -2px;
+	bottom: -2px;
+	left: -2px;
+	right: -2px;
+	background: white;
+	z-index: -2;
+	filter: blur(10px);
+}
+
+.skill_card:nth-child(1):before,
+.skill_card:nth-child(1):after {
+	background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.skill_card_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	display: block;
+	background: rgba(255, 255, 255, .1);
+	pointer-events: none;
+}
+
+@keyframes skill_card_animation {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 1000px) {
+	.skill_card {
+		flex-basis: 45%;
+	}
+}
+
+@media (max-width: 656px) {
+	.skill_card {
+		flex-basis: 95%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+/*skill content*/
+.skills_icon {
+	width: 100%;
+	font-size: 50px;
 	color: white;
+	text-align: center;
 }

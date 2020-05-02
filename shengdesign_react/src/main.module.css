@@ -63,6 +63,21 @@ html {
 	--pr_sm: 25px;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(transparent, #30ff00);
+	transition: .7s ease-in-out;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(transparent, #00c6ff);
+}
+
 body {
 	background-color: #f7f7f7;
 	margin: 0;
