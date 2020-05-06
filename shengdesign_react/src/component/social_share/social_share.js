@@ -59,7 +59,6 @@ const SocialShare = (props) =>{
 
     //map social share btn
     const display_social = social_share_btn_state.map((item, index) => {
-        console.log(item)
         return(
             <a href={item.link} key={"display_social: " + item + index}>
                 <img src={item.icon} className={`${classSelector.social_share_icon}`} alt={item}/>
@@ -76,7 +75,7 @@ const SocialShare = (props) =>{
                 <div className={`${classSelector.social_share_icon_container}`}>
                     {display_social}
                 </div>
-                <a href={github_link_state.github_url} className={`${classSelector.github_link}`} id="github_link">Github</a>
+                <a href={github_link_state.github_url} className={`${classSelector.github_link}`} id="github_link"></a>
             </div>
             
             

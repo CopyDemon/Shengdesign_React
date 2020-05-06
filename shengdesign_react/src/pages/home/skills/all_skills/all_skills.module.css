@@ -53,9 +53,11 @@
 	font-size: 3rem;
 	font-weight: bold;
 	color: white;
-	transition: .3s ease-in-out;
+	transition: .5s ease-in-out;
 }
 
 .all_skills_close_btn:hover {
-	color: var(--pink);
+	cursor: pointer;
+	background-color: var(--pink);
+	border: 1px solid var(--pink);
 }

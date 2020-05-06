@@ -10,7 +10,7 @@ import classSelector from './skills.module.css';
 const Skills = ( props ) =>{
     return(
         <Container>
-            <Row className={`${classSelector.row} col-lg-12 col-md-12 col-md-12`}>
+            <Row className={`${classSelector.skills_row} col-lg-12 col-md-12 col-md-12`}>
                 <SkillsMainContent />
                 <DesignElement />
             </Row>
