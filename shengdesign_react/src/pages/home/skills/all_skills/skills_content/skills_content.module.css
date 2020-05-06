@@ -28,53 +28,59 @@
 	}
 }
 
-.skills_content_flex {
+.skills_content_inner_container {
+	position: relative;
+	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
+	opacity: 0;
+	animation: skills_content_inner_container_animation 1.2s ease-in-out forwards 4s;
+}
+
+@keyframes skills_content_inner_container_animation {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 /*skill card*/
 .skill_card {
 	position: relative;
-	opacity: 0;
 	flex-basis: 30%; /*this can be seen as width*/
-	height: 200px;
+	min-height: 200px;
 	margin-left: 10px;
 	margin-right: 10px;
+	margin-bottom: 20px !important;
 	padding: 20px;
-	margin-bottom: 10px;
-	animation: skill_card_animation 2s ease-in-out forwards 4s;
+	background: #060c21;
 }
 
-.skill_card:before {
-	content: '';
+.skill_card::before {
+	content: "";
 	position: absolute;
-	z-index: -1;
+	z-index: -100;
 	top: -2px;
+	right: -2px;
 	bottom: -2px;
 	left: -2px;
-	right: -2px;
-	background: white;
 }
 
-.skill_card:after {
-	content: '';
+.skill_card::after {
+	content: "";
 	position: absolute;
-	z-index: -1;
+	z-index: -100;
 	top: -2px;
+	right: -2px;
 	bottom: -2px;
 	left: -2px;
-	right: -2px;
-	background: white;
-	z-index: -2;
 	filter: blur(10px);
-}
-
-.skill_card:nth-child(1):before,
-.skill_card:nth-child(1):after {
-	background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
 }
 
 .skill_card_bg {
@@ -84,18 +90,17 @@
 	width: 50%;
 	height: 100%;
 	display: block;
-	background: rgba(255, 255, 255, .1);
+	background-color: rgba(255, 255, 255, .1);
 	pointer-events: none;
 }
 
-@keyframes skill_card_animation {
-	from {
-		opacity: 0;
-	}
+.skill_card:hover {
+	cursor: pointer;
+}
 
-	to {
-		opacity: 1;
-	}
+.skill_card:hover:before,
+.skill_card:hover:after {
+	background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
 }
 
 @media (max-width: 1000px) {
@@ -118,4 +123,21 @@
 	font-size: 50px;
 	color: white;
 	text-align: center;
+}
+
+.skill_card_title,
+.skill_experience_year {
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+
+.skill_card_title {
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.skill_experience_year {
+	font-weight: 500;
 }
