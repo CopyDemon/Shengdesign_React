@@ -54,7 +54,7 @@ const Skills_main_content = (props) => {
                 </span>
     })
     return(
-        <div className={`${classSelector.skills_content_main_container} col-lg-6 col-md-6 col-sm-12`}>
+        <div className={`${classSelector.skills_content_main_container} col-lg-3 col-md-12 col-sm-12`}>
             <div className={`${classSelector.skills_text_container}`}>
                 {rendered_skills_title_text}
             </div>

@@ -1,3 +1,23 @@
+@media (min-width: 1000px) {
+	.skills_content_main_container {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 15%;
+	}
+}
+
+@media (max-width: 1000px) {
+	.skills_content_main_container {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		margin-bottom: var(--mb_md);
+		text-align: center;
+	}
+}
+
 .skills_text_container {
 	position: relative;
 	z-index: 5;

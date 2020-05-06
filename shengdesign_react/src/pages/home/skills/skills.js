@@ -9,12 +9,12 @@ import SkillsMainContent from './skills_main_content/skills_main_content';
 import classSelector from './skills.module.css';
 const Skills = ( props ) =>{
     return(
-        <Container>
-            <Row className={`${classSelector.skills_row} col-lg-12 col-md-12 col-md-12`}>
+        <Container-fluid>
+            <Row className={`${classSelector.skills_row} col-lg-12 col-md-12 col-md-12 px-0 mx-auto`}>
                 <SkillsMainContent />
                 <DesignElement />
             </Row>
-        </Container>
+        </Container-fluid>
     )
 }
 
