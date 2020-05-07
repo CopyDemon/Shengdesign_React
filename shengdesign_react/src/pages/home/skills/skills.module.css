@@ -1,3 +1,4 @@
 .skills_row {
 	position: relative;
+	margin-bottom: var(--mb_md);
 }

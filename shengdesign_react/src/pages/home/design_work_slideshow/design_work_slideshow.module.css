@@ -1,0 +1,12 @@
+.design_work_slideshow_main_container {
+	padding: 20px 30px;
+	background: var(--bg_green);
+	color: white;
+}
+
+.design_work_slideshow_main_title {
+	width: 100%;
+	text-align: center;
+	font-size: var(--title_font_size_md);
+	font-weight: bold;
+}
