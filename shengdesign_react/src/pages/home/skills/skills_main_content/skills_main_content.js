@@ -4,7 +4,6 @@ import {useSelector,useDispatch} from 'react-redux';
 import {show_all_skills} from '../../../../REDUX/action/show_all_skills';
 
 //import script
-import AllSkills from '../all_skills/all_skills';
 
 //import css
 import classSelector from './skills_main_content.module.css';
@@ -15,8 +14,8 @@ const Skills_main_content = (props) => {
     const dispatch = useDispatch();
 
     //state
-    const [skills_main_content_data, set_skills_main_content_data] = useState({
-        skills_title_text:['Unlimitied Web', 'Development & Design', 'Skills.'],
+    const [skills_main_content_data] = useState({
+        skills_title_text:['Unlimitied Web', 'Design & Development', 'Skills.'],
         main_skills:["let's view"]
     });
 
@@ -61,7 +60,6 @@ const Skills_main_content = (props) => {
             <div className={`${classSelector.skills_tab_container}`}>
                 {skills_tab}
             </div>
-            <AllSkills />
         </div>
     )
 }

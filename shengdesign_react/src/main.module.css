@@ -14,7 +14,11 @@ html {
 	--z_index_md: 25;
 	--z_index_lower: -10;
 
+	--blue: #3a2fd6;
+	--pink_blue: #5B84B1FF;
 	--dark_blue: #343a40;
+
+	--living_coral_pink: #FC766AFF;
 	--pink: #ff006f;
 	--pink_green: #9df8e4;
 	--yellow: #ffff00;

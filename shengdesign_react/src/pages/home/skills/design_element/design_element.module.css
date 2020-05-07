@@ -1,6 +1,6 @@
 /*design element content container*/
 .skills_desgin_element_container {
-	position: relative;
+	/* position: relative; */
 	overflow-y: scroll;
 	min-height: 700px;
 }
@@ -20,34 +20,195 @@
 	}
 }
 
-.skills_design_element_mock_container {
-	position: absolute;
-	z-index: 2;
-	width: 100%;
-	height: 100%;
-	background: black;
-}
-
+/*bg*/
 .skills_design_element_content_container_bg {
 	position: absolute;
 	z-index: 1;
+	opacity: 0;
 	width: 100%;
 	height: 100%;
 	background: url("../../../../Assets/image/explode_color.jpg");
-	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
-/* .skills_design_element_content_container_bg_animtion {
-	animation: skills_design_element_content_container_bg_animation 2s ease-in-out forwards 2s;
+.skills_design_element_content_container_bg_animtion {
+	animation: skills_design_element_content_container_bg_animation 1s ease-in-out forwards .7s;
 }
 
 @keyframes skills_design_element_content_container_bg_animation {
 	from {
-		background: url("../../../../Assets/image/explode_color.jpg");
+		opacity: 0;
 	}
 	to {
-		background: white;
+		opacity: 1;
 	}
-} */
+}
+
+/*Mock container*/
+.skills_design_element_mock_container {
+	position: absolute;
+	z-index: 2;
+	width: 0%;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--pink);
+	overflow-y: hidden;
+}
+
+.skills_design_element_mock_container_animation {
+	animation: skills_design_element_mock_container_animation 1s ease-in-out forwards 1.5s;
+}
+
+@keyframes skills_design_element_mock_container_animation {
+	from {
+		width: 0%;
+		height: 0%;
+	}
+
+	to {
+		width: 90%;
+		height: 90%;
+	}
+}
+
+/*skills design element inner content*/
+.skills_design_element_mock_inner_main_content_container {
+	position: relative;
+	padding: 20px 30px;
+	z-index: 3;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	animation: skills_design_element_mock_inner_main_content_container_scroll_animation 30s ease-in-out infinite 3s;
+}
+
+@keyframes skills_design_element_mock_inner_main_content_container_scroll_animation {
+	0% {
+		top: 0%;
+	}
+
+	20% {
+		top: -25%;
+	}
+
+	40% {
+		top: -50%;
+	}
+
+	60% {
+		top: -75%;
+	}
+
+	80% {
+		top: -125%;
+	}
+
+	100% {
+		top: 0%;
+	}
+}
+
+.skills_design_element_mock_inner_main_content_title {
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 20px auto;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
+
+.skills_design_element_mock_inner_main_content_row {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	min-height: 400px;
+	margin-bottom: 30px;
+}
+
+.skills_design_element_mock_inner_main_content_row_subtitle {
+	padding-left: 20px;
+	font-size: 20px;
+	color: white;
+	margin-bottom: var(--mb_sm);
+}
+
+@media (min-width: 1000px) {
+	.skills_design_element_mock_inner_main_content_row_subtitle {
+		width: 70%;
+	}
+}
+
+@media (max-width: 1000px) {
+	.skills_design_element_mock_inner_main_content_row_subtitle {
+		width: 100%;
+	}
+}
+
+/*content_row_content*/
+.skills_design_element_mock_inner_main_content_row_content {
+	display: inline-block;
+	padding: 15px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background-color: var(--pink_blue);
+}
+
+@media (min-width: 1000px) {
+	.skills_design_element_mock_inner_main_content_row_content {
+		width: 50%;
+	}
+}
+
+@media (max-width: 1000px) {
+	.skills_design_element_mock_inner_main_content_row_content {
+		width: 100%;
+		display: block;
+	}
+}
+
+.skills_design_element_mock_inner_main_content_image {
+	display: inline-block;
+}
+
+@media (min-width: 1000px) {
+	.skills_design_element_mock_inner_main_content_image {
+		width: 70%;
+	}
+}
+
+@media (max-width: 1000px) {
+	.skills_design_element_mock_inner_main_content_image {
+		width: 100%;
+	}
+}
+
+@media (min-width: 1000px) {
+	.image_align_right {
+		position: absolute;
+		right: 0;
+		box-shadow: -20px -20px 0px var(--living_coral_pink);
+	}
+
+	.image_align_left {
+		position: absolute;
+		left: 0;
+		box-shadow: 20px -20px 0px var(--living_coral_pink);
+	}
+	.content_box_align_left {
+		position: absolute;
+		left: 0;
+		top: 60%;
+		transform: translateY(-50%);
+	}
+	.content_box_align_right {
+		position: absolute;
+		right: 0;
+		top: 60%;
+		transform: translateY(-50%);
+	}
+}
