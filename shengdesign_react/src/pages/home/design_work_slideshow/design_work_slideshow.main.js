@@ -34,37 +34,37 @@ import prevision_bg from '../../../Assets/image/home_work_slideshow/prevision_bg
 
 
 const DesignWorkSlideShow = () =>{
-    const [design_work_slideshow_state] = useState({
-        popmusic : {
-            image:[popmusicImg01,popmusicImg02,popmusicImg03,popmusicImg04,popmusicImg05],
-            container_bg:popmusic_bg,
-            name:"POPMusic",
-            content:"",
-            link:""
-        },
-        fruitOne : {
-            image:[fruitOneImg01, fruitOneImg02, fruitOneImg03, fruitOneImg04],
-            container_bg:fruitOne_bg,
-            name:"FruitOne",
-            content:"",
-            link:""
-        },
-        developer : {
-            image:[developerImg01, developerImg02, developerImg03, developerImg04],
-            container_bg:developer_bg,
-            name:"Developers",
-            content:"",
-            link:""
-        },
-        Prevision : {
-            image:[previsionImg01, previsionImg02, previsionImg03, previsionImg04],
-            container_bg:prevision_bg,
-            name:"Prevision",
-            content:"",
-            link:""
-        },
-        // slide_number:1
-    })
+        const [design_work_slideshow_state] = useState({
+            popmusic : {
+                image:[popmusicImg01,popmusicImg02,popmusicImg03,popmusicImg04,popmusicImg05],
+                container_bg:popmusic_bg,
+                name:"POPMusic",
+                content:"",
+                link:""
+            },
+            fruitOne : {
+                image:[fruitOneImg01, fruitOneImg02, fruitOneImg03, fruitOneImg04],
+                container_bg:fruitOne_bg,
+                name:"FruitOne",
+                content:"",
+                link:""
+            },
+            developer : {
+                image:[developerImg01, developerImg02, developerImg03, developerImg04],
+                container_bg:developer_bg,
+                name:"Developers",
+                content:"",
+                link:""
+            },
+            Prevision : {
+                image:[previsionImg01, previsionImg02, previsionImg03, previsionImg04],
+                container_bg:prevision_bg,
+                name:"Prevision",
+                content:"",
+                link:""
+            },
+            // slide_number:1
+        })
 
     const [design_work_slideshow_number_state, design_work_slideshow_number_setState] = useState(1);
 
@@ -108,7 +108,6 @@ const DesignWorkSlideShow = () =>{
                             break;
                         default:
                             el.style.left = "7%";
-                            console.log(slide_count);
                     }    
                })
             }else{
@@ -131,9 +130,7 @@ const DesignWorkSlideShow = () =>{
                     }    
                })
             }
-            // console.log(slide_count)
-            design_work_slideshow_number_setState(slide_count + 1);
-            console.log(design_work_slideshow_number_state)
+            // design_work_slideshow_number_setState(slide_count + 1);
         })
 
         design_work_left_arrow_container.addEventListener('click', ()=>{
