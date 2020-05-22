@@ -1,6 +1,7 @@
 .design_work_slideshow_main_container {
 	position: relative;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	padding: 20px 30px;
 	color: white;
 	background: var(--bg_green);
