@@ -34,7 +34,7 @@ import prevision_bg from '../../../Assets/image/home_work_slideshow/prevision_bg
 
 
 const DesignWorkSlideShow = () =>{
-        let [design_work_slideshow_state, design_work_slideshow_setState] = useState({
+        let [design_work_slideshow_state] = useState({
                 slide_show_data:{
                     popmusic : {
                     image:[popmusicImg01,popmusicImg02,popmusicImg03,popmusicImg04,popmusicImg05],

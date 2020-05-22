@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container , Row} from 'react-bootstrap';
+import {Row} from 'react-bootstrap';
 
 //import script
 import DesignElement from './design_element/design_element';

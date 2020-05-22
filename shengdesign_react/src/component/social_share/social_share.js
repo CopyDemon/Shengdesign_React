@@ -31,11 +31,6 @@ const SocialShare = (props) =>{
             link:'https://www.shengdesign.com',
             icon:linkedin_social_icon
         }
-        // {
-        //     name:'Github',
-        //     link:'https://www.shengdesign.com',
-        //     icon:github_social_icon
-        // }
     ]);
     //state for github link
     const[github_link_state] = useState({
@@ -48,7 +43,7 @@ const SocialShare = (props) =>{
         github_link.addEventListener('mouseover', ()=>{
             setTimeout(()=>{
                 github_link.innerHTML = "GITHUB 😋";
-            },400)
+            },1)
         })
 
         github_link.addEventListener('mouseout', ()=>{
@@ -75,7 +70,7 @@ const SocialShare = (props) =>{
                 <div className={`${classSelector.social_share_icon_container}`}>
                     {display_social}
                 </div>
-                <a href={github_link_state.github_url} className={`${classSelector.github_link}`} id="github_link"></a>
+                <a href={github_link_state.github_url} className={`${classSelector.github_link}`} id="github_link"><span></span></a>
             </div>
             
             

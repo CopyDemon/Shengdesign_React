@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React  from 'react';
 
 //import redux
 import {useSelector,useDispatch} from 'react-redux';
@@ -12,7 +12,6 @@ import AllSkillsTitleSVG from './all_skills_title_svg/all_skills_title_svg';
 import SkillsContent from './skills_content/skills_content';
 
 //import image
-// import img from "../../../../Assets/image/return_arrow.png"
 
 const AllSkills = (props) =>{
     //redux var
@@ -20,12 +19,6 @@ const AllSkills = (props) =>{
     const show_or_hide_all_skills = useSelector(state =>state.skillsReducer);
     const dispatch = useDispatch();
     //state
-    const[all_skills_state] = useState(
-        {
-            frontend_title: 'Frontend Skills',
-            backend_title: 'Background Skills'
-        }
-    );
     
     let all_skills_container;
     if(show_or_hide_all_skills){
