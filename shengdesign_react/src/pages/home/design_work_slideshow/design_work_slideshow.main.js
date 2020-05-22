@@ -34,39 +34,43 @@ import prevision_bg from '../../../Assets/image/home_work_slideshow/prevision_bg
 
 
 const DesignWorkSlideShow = () =>{
-        const [design_work_slideshow_state] = useState({
-            popmusic : {
-                image:[popmusicImg01,popmusicImg02,popmusicImg03,popmusicImg04,popmusicImg05],
-                container_bg:popmusic_bg,
-                name:"POPMusic",
-                content:"",
-                link:""
-            },
-            fruitOne : {
-                image:[fruitOneImg01, fruitOneImg02, fruitOneImg03, fruitOneImg04],
-                container_bg:fruitOne_bg,
-                name:"FruitOne",
-                content:"",
-                link:""
-            },
-            developer : {
-                image:[developerImg01, developerImg02, developerImg03, developerImg04],
-                container_bg:developer_bg,
-                name:"Developers",
-                content:"",
-                link:""
-            },
-            Prevision : {
-                image:[previsionImg01, previsionImg02, previsionImg03, previsionImg04],
-                container_bg:prevision_bg,
-                name:"Prevision",
-                content:"",
-                link:""
-            },
-            // slide_number:1
-        })
+        let [design_work_slideshow_state, design_work_slideshow_setState] = useState({
+                slide_show_data:{
+                    popmusic : {
+                    image:[popmusicImg01,popmusicImg02,popmusicImg03,popmusicImg04,popmusicImg05],
+                    container_bg:popmusic_bg,
+                    name:"POPMusic",
+                    content:"",
+                    link:""
+                },
+                fruitOne : {
+                    image:[fruitOneImg01, fruitOneImg02, fruitOneImg03, fruitOneImg04],
+                    container_bg:fruitOne_bg,
+                    name:"FruitOne",
+                    content:"",
+                    link:""
+                },
+                developer : {
+                    image:[developerImg01, developerImg02, developerImg03, developerImg04],
+                    container_bg:developer_bg,
+                    name:"Developers",
+                    content:"",
+                    link:""
+                },
+                Prevision : {
+                    image:[previsionImg01, previsionImg02, previsionImg03, previsionImg04],
+                    container_bg:prevision_bg,
+                    name:"Prevision",
+                    content:"",
+                    link:""
+                }
+            }
+    })
+    
 
-    const [design_work_slideshow_number_state, design_work_slideshow_number_setState] = useState(1);
+    //slide_show_right_arrow_slide_number_handler
+    //slide_show_left_arrow_slide_number_handler
+
 
     useEffect(()=>{
         //slideshow left and right arrow
@@ -83,11 +87,10 @@ const DesignWorkSlideShow = () =>{
             window_width = window.innerWidth;
         })
 
-        //left right arrow event listener
+        //right right arrow event listener
         design_work_right_arrow_container.addEventListener('click', ()=>{
             slide_count += 1;
-
-            if(slide_count > Object.keys(design_work_slideshow_state).length - 1){
+            if(slide_count > Object.keys(design_work_slideshow_state.slide_show_data).length - 1){
                 slide_count = 0;
             }
 
@@ -130,13 +133,13 @@ const DesignWorkSlideShow = () =>{
                     }    
                })
             }
-            // design_work_slideshow_number_setState(slide_count + 1);
         })
 
+        //left arrow event listener
         design_work_left_arrow_container.addEventListener('click', ()=>{
             slide_count -= 1;
             if(slide_count < 0){
-                slide_count = 3;
+                slide_count = Object.keys(design_work_slideshow_state.slide_show_data).length - 1;
             }
 
             if(window.innerWidth > 600){
@@ -183,8 +186,10 @@ const DesignWorkSlideShow = () =>{
     })
     //functions
     //base on state map all works into their own container and display
-    const all_works = Object.keys(design_work_slideshow_state).map((el, index)=>{
-        return [...Array(design_work_slideshow_state[el])].map((el, index)=>{
+    let slide_show_data = {...design_work_slideshow_state.slide_show_data};
+    console.log(Object.keys(slide_show_data))
+    const all_works = Object.keys(slide_show_data).map((el, index)=>{
+        return [...Array(slide_show_data[el])].map((el, index)=>{
            return(
                 <div className={`${classSelector.design_work_each_main_container} design_work_each_main_container_selector`} key={`${el}_container`}>
                     <div className={`${classSelector.design_work_artboard}`} 
@@ -206,6 +211,7 @@ const DesignWorkSlideShow = () =>{
         })
     })
 
+
     return (
         <section className={`${classSelector.design_work_slideshow_main_container} container-fluid px-0 mx-0`}>
             <p className={`${classSelector.design_work_slideshow_main_title}`}>Work Showcase Overview</p>
@@ -220,7 +226,6 @@ const DesignWorkSlideShow = () =>{
                     >
                         <i className="fas fa-long-arrow-alt-left"></i>
                     </p>
-                    <p>{design_work_slideshow_number_state} / 4</p>
                     <p className={`${classSelector.design_work_right_arrow_container}`}
                        id="design_work_right_arrow_container"
                     >
