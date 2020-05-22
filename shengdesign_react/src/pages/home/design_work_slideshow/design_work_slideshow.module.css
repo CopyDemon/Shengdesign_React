@@ -56,8 +56,6 @@
 
 .design_work_artboard:hover {
 	cursor: pointer;
-	background-size: 110% 110%;
-	transition: .7s ease-in-out;
 }
 
 /*design work title*/
